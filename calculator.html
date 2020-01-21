@@ -22,11 +22,11 @@
 
         function call() {
             var monthInterest = interest / 100 / 12;
-            var paymentValue = Math.floor(amount * (monthInterest + (monthInterest / (Math.pow(1 + monthInterest, term) - 1))) * 100) / 100;
-            var returnValue = Math.floor( paymentValue * term * 100) / 100;
+            var paymentValue = Math.floor(amount * (monthInterest + (monthInterest / (Math.pow(1 + monthInterest, term) - 1))) * 100 / 100);
+            var returnValue = Math.floor(paymentValue * term * 100 / 100);
             var D = new Date();
             
-            D.setMonth(D.getMonth() + term );
+            D.setMonth(D.getMonth() + term);
             
             $( "#date" ).html( D.toLocaleDateString() );
             $( "#take" ).html( amount.toLocaleString('ru-RU') );
@@ -221,6 +221,4 @@
         </div>
     </form>
 </body>
-
-
 </html>

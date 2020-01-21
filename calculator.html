@@ -7,9 +7,6 @@
     <title>Калькулятор</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <style>#slider { margin: 10px; }	</style>
@@ -48,8 +45,8 @@
 
         $( "#slider-term" ).slider({
             min: 3,
-            value: 3,
             max: 12,
+            value: 3,
             slide: function( event, ui ) {
             $( "#term" ).html( ui.value );
             term = ui.value;
@@ -67,12 +64,12 @@
 
         $( "#slider-interest" ).slider({
             min: 5,
+            max: 40,
             value: 5,
             step: 0.5,
-            max: 40,
             slide: function( event, ui ) {
-            $( "#interest" ).html( ui.value );
             interest = ui.value;
+            $( "#interest" ).html( ui.value );
             call();
             }
         });
@@ -111,7 +108,7 @@
                         <div class="row">
                             <div class="col text-right">
                                 <span id="amount" style="border:0; color:#f6931f; font-weight:bold; font-size: 2em;"></span>
-                                <span>тнг.</span>
+                                <span>руб.</span>
                             </div>
                         </div>
                     </div>
@@ -185,7 +182,7 @@
                     </div>
                     <div class="col text-right">
                         <span id="take" style="color:#f6931f;"></span>
-                        <span style="color:#f6931f;">тнг.</span>
+                        <span style="color:#f6931f;">руб.</span>
                     </div>
                 </div>
                 <div class="row">
@@ -194,7 +191,7 @@
                     </div>
                     <div class="col text-right">
                         <span id="returnValue" style="color:#f6931f;"></span>
-                        <span style="color:#f6931f;">тнг.</span>
+                        <span style="color:#f6931f;">руб.</span>
                     </div>
                 </div>
                 <div class="row">
@@ -211,7 +208,7 @@
                     </div>
                     <div class="col text-right">
                         <span id="paymentValue" style="color:#f6931f;"></span>
-                        <span style="color:#f6931f;">тнг.</span>
+                        <span style="color:#f6931f;">руб.</span>
                     </div>
                 </div>
                 <div class="row">
